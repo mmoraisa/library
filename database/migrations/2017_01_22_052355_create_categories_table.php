@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name_PT')->unique();
             $table->string('name_US')->unique();
-            $table->timestamps();
         });
     }
 

@@ -25,4 +25,6 @@ class Book extends Model
     public function author(){
         return $this->belongsTo('App\Author');
     }
+
+    public $timestamps = false;
 }

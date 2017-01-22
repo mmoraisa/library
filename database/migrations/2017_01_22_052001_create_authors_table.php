@@ -19,7 +19,6 @@ class CreateAuthorsTable extends Migration
             $table->date('birthday');
             $table->string('bio_PT');
             $table->string('bio_US');
-            $table->timestamps();
         });
     }
 
