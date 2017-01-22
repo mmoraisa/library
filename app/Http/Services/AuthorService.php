@@ -9,6 +9,7 @@
 
 namespace App\Http\Services;
 
+use App\Author;
 use App\Http\Repositories\AuthorRepository;
 
 class AuthorService
@@ -24,6 +25,11 @@ class AuthorService
         $this->authorRepository = $authorRepository;
     }
 
+    /**
+     * Find an Author by Id
+     * @param $id author id
+     * @return Author
+     */
     public function findAuthorById($id){
         return $this->authorRepository->findById($id);
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\AuthorService;
+use Illuminate\Http\Request;
 
 class AuthorController extends Controller
 {

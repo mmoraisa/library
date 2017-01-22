@@ -9,9 +9,11 @@
 
 namespace App\Http\Repositories;
 
+use \App\Author;
+
 class AuthorRepository
 {
     public function findById($id){
-        return \App\Author::all()->where('id','=',$id);
+        return Author::find($id);
     }
 }
