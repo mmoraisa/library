@@ -27,6 +27,7 @@ class BotController extends Controller
         $request_body = Input::all();
         $action = $request_body['result']['action'];
         $speech = '';
+
         switch ($action){
             case 'knowBooks':
                 $speech = $this->botService->knowBooks();
