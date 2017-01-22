@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: mmorais
@@ -9,10 +8,9 @@
 
 namespace App\Http\Services;
 
-use App\Category;
 use App\Http\Repositories\CategoryRepository;
 
-class CategoryService
+class CategoryService implements CRUDService
 {
     private $categoryRepository;
 
@@ -25,13 +23,28 @@ class CategoryService
         $this->categoryRepository = $categoryRepository;
     }
 
-    /**
-     * Find a Category by Id
-     * @param $id category id
-     * @return Category
-     */
-    public function findCategoryById($id){
+    public function get($id)
+    {
         return $this->categoryRepository->findById($id);
     }
 
+    public function getAll()
+    {
+        return $this->categoryRepository->findAll();
+    }
+
+    public function save(array $category)
+    {
+        return $this->categoryRepository->save($category);
+    }
+
+    public function update($id, array $category)
+    {
+        return $this->categoryRepository->update($id,$category);
+    }
+
+    public function delete($id)
+    {
+        $this->categoryRepository->delete($id);
+    }
 }

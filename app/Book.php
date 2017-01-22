@@ -15,7 +15,7 @@ class Book extends Model
      * @var array
      */
     protected $fillable = [
-        'name_PT', 'description_PT', 'cover_url_PT','name_US', 'description_US', 'cover_url_US'
+        'name_PT', 'description_PT', 'cover_url_PT','name_US', 'description_US', 'cover_url_US', 'category_id', 'author_id'
     ];
 
     public function category(){

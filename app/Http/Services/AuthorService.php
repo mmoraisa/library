@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: mmorais
@@ -9,10 +8,9 @@
 
 namespace App\Http\Services;
 
-use App\Author;
 use App\Http\Repositories\AuthorRepository;
 
-class AuthorService
+class AuthorService implements CRUDService
 {
     private $authorRepository;
 
@@ -25,12 +23,28 @@ class AuthorService
         $this->authorRepository = $authorRepository;
     }
 
-    /**
-     * Find an Author by Id
-     * @param $id author id
-     * @return Author
-     */
-    public function findAuthorById($id){
+    public function get($id)
+    {
         return $this->authorRepository->findById($id);
+    }
+
+    public function getAll()
+    {
+        return $this->authorRepository->findAll();
+    }
+
+    public function save(array $author)
+    {
+        return $this->authorRepository->save($author);
+    }
+
+    public function update($id, array $author)
+    {
+        return $this->authorRepository->update($id,$author);
+    }
+
+    public function delete($id)
+    {
+        $this->authorRepository->delete($id);
     }
 }
