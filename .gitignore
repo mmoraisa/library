@@ -6,3 +6,11 @@
 Homestead.json
 Homestead.yaml
 .env
+node_modules/
+bootstrap/compiled.php
+app/storage/
+bootstrap/cache/
+.env.*.php
+.env.php
+.env
+.rocketeer/
