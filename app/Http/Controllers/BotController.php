@@ -15,6 +15,6 @@ class BotController extends Controller
         $data = array('attrteste' => '1');
         $response = new BotResponseVO("teste speech","test display text",$data,[],"text source");
 
-        return array('speech' => 'Nós temos diversos tipos de livros');
+        return array('speech' => $request_body['result']['action']);
     }
 }
