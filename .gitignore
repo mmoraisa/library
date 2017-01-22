@@ -10,3 +10,4 @@ bootstrap/compiled.php
 app/storage/
 bootstrap/cache/
 .rocketeer/
+.env
