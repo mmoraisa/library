@@ -40,3 +40,5 @@ Route::group(['prefix' => 'book'],function(){
     Route::put('/{id}',['uses' => 'BookController@update']);
     Route::delete('/{id}',['uses' => 'BookController@delete']);
 });
+
+Route::post('bot',['uses' => 'BotController@defaultWebHook']);
